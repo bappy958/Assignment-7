@@ -1,0 +1,33 @@
+// function NotFound() {
+//   return (
+//     <div className="my-6 px-4 sm:px-6 lg:px-30 mx-auto text-center">
+//       <h1 className="text-3xl font-bold text-gray-900 mb-6">404 - Not Found</h1>
+//       <p className="text-gray-500 text-lg">
+//         {` Oops! The page you're looking for doesn't exist.`}
+//       </p>
+//     </div>
+//   );
+// }
+
+// export default NotFound;
+import Link from "next/link";
+
+export default function NotFound() {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+      <h2 className="text-6xl font-black text-[#244D3F]">404</h2>
+      <h3 className="text-2xl font-semibold mt-4">Page Not Found!</h3>
+      <p className="text-gray-600 mt-2 max-w-md">
+        Sorry, the page you are looking for might have been deleted or the URL
+        was typed incorrectly.
+      </p>
+
+      <Link
+        href="/"
+        className="mt-6 px-6 py-3 bg-[#244D3F] text-white rounded-lg font-medium hover:bg-opacity-90 transition-all"
+      >
+        Back to Home
+      </Link>
+    </div>
+  );
+}

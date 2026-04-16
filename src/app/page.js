@@ -1,11 +1,11 @@
-import React from 'react';
+import Home from "@/components/Home/Home";
 
-const page = () => {
+export default function HomePage() {
   return (
-    <div>
-      
+    <div className="flex flex-col flex-1 items-center justify-center">
+      <main className="flex flex-1 w-full  flex-col items-center ">
+        <Home />
+      </main>
     </div>
   );
-};
-
-export default page;
+}
