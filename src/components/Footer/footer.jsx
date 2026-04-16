@@ -2,6 +2,7 @@ import Image from "next/image";
 import logo from "@/assets/logo-xl.png";
 import facebook from "@/assets/facebook.png";
 import twitter from "@/assets/twitter.png";
+import instagram from "@/assets/instagram.png";
 import Link from "next/link";
 
 function Footer() {
@@ -28,7 +29,7 @@ function Footer() {
             </Link>
             <Link href="#" className="hover:opacity-80 transition-opacity">
               <Image
-                src={loginstagram}
+                src={instagram}
                 alt="Instagram"
                 width={24}
                 height={24}
