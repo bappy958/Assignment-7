@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Johnson",
+    "picture": "https://i.pravatar.cc/150?img=1",
+    "email": "alex@example.com",
+    "days_since_contact": 10,
+    "status": "overdue",
+    "tags": ["college", "close"],
+    "bio": "We met in university. Love traveling.",
+    "goal": 14,
+    "next_due_date": "2026-04-25"
+  },
+  {
+    "id": 2,
+    "name": "Emma Wilson",
+    "picture": "https://i.pravatar.cc/150?img=2",
+    "email": "emma@example.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["work"],
+    "bio": "Colleague and coffee partner.",
+    "goal": 7,
+    "next_due_date": "2026-04-20"
+  }
+]
