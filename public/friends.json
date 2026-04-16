@@ -1,26 +1,98 @@
 [
   {
     "id": 1,
-    "name": "Alex Johnson",
-    "picture": "https://i.pravatar.cc/150?img=1",
-    "email": "alex@example.com",
-    "days_since_contact": 10,
+    "name": "Arafat Hossain",
+    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    "email": "arafat.hossain@example.com",
+    "days_since_contact": 18,
     "status": "overdue",
-    "tags": ["college", "close"],
-    "bio": "We met in university. Love traveling.",
+    "tags": ["college", "roommate"],
+    "bio": "My university roommate. We used to prepare exams together late at night and still catch up occasionally about tech and startups.",
     "goal": 14,
-    "next_due_date": "2026-04-25"
+    "next_due_date": "2026-04-05"
   },
   {
     "id": 2,
-    "name": "Emma Wilson",
-    "picture": "https://i.pravatar.cc/150?img=2",
-    "email": "emma@example.com",
+    "name": "Nusrat Jahan",
+    "picture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+    "email": "nusrat.jahan@example.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["school friend", "childhood"],
+    "bio": "Childhood friend from school days. We often talk about career goals and personal growth updates.",
+    "goal": 10,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 3,
+    "name": "Shakil Ahmed",
+    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    "email": "shakil.ahmed@example.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["work", "colleague"],
+    "bio": "Former project teammate. We collaborated on a web development project and still share coding resources.",
+    "goal": 14,
+    "next_due_date": "2026-04-15"
+  },
+  {
+    "id": 4,
+    "name": "Tanvir Rahman",
+    "picture": "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8",
+    "email": "tanvir.rahman@example.com",
+    "days_since_contact": 22,
+    "status": "overdue",
+    "tags": ["gaming", "online friend"],
+    "bio": "Met through online gaming. We still play strategy games on weekends when time allows.",
+    "goal": 14,
+    "next_due_date": "2026-03-30"
+  },
+  {
+    "id": 5,
+    "name": "Farhana Islam",
+    "picture": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
+    "email": "farhana.islam@example.com",
     "days_since_contact": 3,
     "status": "on-track",
-    "tags": ["work"],
-    "bio": "Colleague and coffee partner.",
-    "goal": 7,
-    "next_due_date": "2026-04-20"
+    "tags": ["cousin", "family"],
+    "bio": "Cousin who lives in Dhaka. We regularly check in about family updates and study progress.",
+    "goal": 10,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 6,
+    "name": "Mehedi Hasan",
+    "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+    "email": "mehedi.hasan@example.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["startup", "entrepreneur"],
+    "bio": "Startup enthusiast I met at a tech meetup. We often discuss app ideas and new technologies.",
+    "goal": 14,
+    "next_due_date": "2026-04-12"
+  },
+  {
+    "id": 7,
+    "name": "Sadia Rahman",
+    "picture": "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
+    "email": "sadia.rahman@example.com",
+    "days_since_contact": 14,
+    "status": "overdue",
+    "tags": ["university", "study group"],
+    "bio": "Study group partner from diploma classes. We used to solve programming problems together before exams.",
+    "goal": 14,
+    "next_due_date": "2026-04-01"
+  },
+  {
+    "id": 8,
+    "name": "Imran Ali",
+    "picture": "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c",
+    "email": "imran.ali@example.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["sports", "cricket buddy"],
+    "bio": "Cricket buddy from our local club. We play matches on Fridays and discuss match strategies.",
+    "goal": 10,
+    "next_due_date": "2026-04-16"
   }
 ]
