@@ -12,13 +12,18 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 async function FriendDetails({ params }) {
-  const { friend } = await params;
+  const { friend } = params;
 
-  const response = await fetch("https://assignment-7-theta-seven.vercel.app/friends.json", 
-    );
+  const response = await fetch(
+    "https://assignment-7-theta-seven.vercel.app/friends.json",
+    { cache: "no-store" }
+  );
 
   const friendsData = await response.json();
-  const data = friendsData.find((item) => item.id === parseInt(friend));
+
+  const data = friendsData.find(
+    (item) => String(item.id) === String(friend)
+  );
 
   if (!data) notFound();
 
@@ -37,95 +42,50 @@ async function FriendDetails({ params }) {
   return (
     <div className="my-6 px-4 sm:px-6 lg:px-16">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        {/* ── LEFT COLUMN ── */}
+
+        {/* LEFT */}
         <div className="lg:col-span-1 flex flex-col gap-3">
-          {/* Profile card */}
-          <div className="bg-white border border-gray-100 rounded-xl px-4 py-5 flex flex-col items-center gap-2.5 text-center">
-            <div className="w-18 h-18 rounded-full overflow-hidden border border-gray-100 shrink-0">
-              <Image
-                src={data.picture}
-                width={72}
-                height={72}
-                alt={data.name}
-                className="object-cover w-full h-full"
-              />
-            </div>
 
-            <p className="text-sm font-medium text-gray-900">{data.name}</p>
+          <div className="bg-white border rounded-xl px-4 py-5 text-center">
+            <Image
+              src={data.picture}
+              width={72}
+              height={72}
+              alt={data.name}
+              className="rounded-full mx-auto"
+            />
 
-            <div className="mt-auto w-full pt-3 border-t border-gray-50">
-              <span
-                className={`text-xs font-bold uppercase px-3 py-1 rounded-full text-white ${
-                  data.status === "overdue"
-                    ? "bg-red-600"
-                    : data.status === "almost due"
-                      ? "bg-orange-600"
-                      : "bg-green-600"
-                }`}
-              >
-                {data.status}
-              </span>
-            </div>
+            <p className="font-medium">{data.name}</p>
 
-            <div className="w-full border-t border-gray-50 pt-3 flex flex-wrap gap-1 justify-center">
-              {data.tags.map((item, i) => (
-                <span
-                  key={i}
-                  className="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-green-50 text-green-700"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-
-            <p className="text-xs text-gray-400 leading-relaxed">{data.bio}</p>
-            <p className="text-xs text-gray-400">Preferred: {data.email}</p>
+            <p className="text-xs text-gray-400">{data.email}</p>
           </div>
 
-          {/* Action buttons */}
-          <button className="bg-white border border-gray-100 rounded-lg py-2.5 px-4 text-sm text-gray-700 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors">
+          <button className="bg-white border rounded-lg py-2.5">
             <Timer /> Snooze 2 weeks
           </button>
-          <button className="bg-white border border-gray-100 rounded-lg py-2.5 px-4 text-sm text-gray-700 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors">
+
+          <button className="bg-white border rounded-lg py-2.5">
             <Archive size={15} /> Archive
           </button>
-          <button className="bg-white border border-red-100 rounded-lg py-2.5 px-4 text-sm text-red-600 flex items-center justify-center gap-2 hover:bg-red-50 transition-colors">
+
+          <button className="bg-white border border-red-200 text-red-600 rounded-lg py-2.5">
             <Trash2 size={15} /> Delete
           </button>
+
         </div>
 
-        {/* ── RIGHT COLUMN ── */}
+        {/* RIGHT */}
         <div className="lg:col-span-2 flex flex-col gap-3">
-          {/* Stats row */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+
+          <div className="grid grid-cols-3 gap-3">
             {statsData.map((item, i) => (
               <StatsCard key={i} number={item.number} label={item.label} />
             ))}
           </div>
 
-          {/* Relationship goal */}
-          <div className="bg-white border border-gray-100 rounded-xl px-4 py-4">
-            <div className="flex items-center justify-between mb-1.5">
-              <p className="text-sm font-medium text-gray-800">
-                Relationship goal
-              </p>
-              <button className="text-xs text-blue-600 hover:underline">
-                Edit
-              </button>
-            </div>
-            <p className="text-sm text-gray-500">
-              Connect every{" "}
-              <span className="font-medium text-gray-800">
-                {data.goal} days
-              </span>
-            </p>
-          </div>
+          <div className="bg-white border rounded-xl p-4">
+            <p className="font-medium mb-3">Quick check-in</p>
 
-          {/* Quick check-in */}
-          <div className="bg-white border border-gray-100 rounded-xl px-4 py-4">
-            <p className="text-sm font-medium text-gray-800 mb-3">
-              Quick check-in
-            </p>
             <div className="grid grid-cols-3 gap-2">
               {checkIn.map(({ icon, label }) => (
                 <CheckInButton
@@ -137,6 +97,7 @@ async function FriendDetails({ params }) {
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </div>
