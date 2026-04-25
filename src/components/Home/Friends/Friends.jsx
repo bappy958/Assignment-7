@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 async function Friends() {
-  const response = await fetch("/friends.json", { cache: "no-store" });
+  const response = await fetch("https://vercel.com/bappy-ahmmed-s-projects/assignment-7/friends.json", { cache: "no-store" });
   const friends = await response.json();
 
   return (
