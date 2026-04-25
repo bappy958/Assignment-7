@@ -14,7 +14,7 @@ import { notFound } from "next/navigation";
 async function FriendDetails({ params }) {
   const { friend } = await params;
 
-  const response = await fetch("/friends.json", { cache: "no-store" });
+  const response = await fetch("https://assignment-7-theta-seven.vercel.app//friends.json", { cache: "no-store" });
 
   const friendsData = await response.json();
   const data = friendsData.find((item) => item.id === parseInt(friend));
