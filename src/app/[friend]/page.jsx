@@ -12,7 +12,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 async function FriendDetails({ params }) {
-  const { friend } = params;
+  const { friend } = await params;
 
   const response = await fetch("https://assignment-7-theta-seven.vercel.app/friends.json");
   const friendsData = await response.json();
