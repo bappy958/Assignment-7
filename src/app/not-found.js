@@ -1,15 +1,3 @@
-// function NotFound() {
-//   return (
-//     <div className="my-6 px-4 sm:px-6 lg:px-30 mx-auto text-center">
-//       <h1 className="text-3xl font-bold text-gray-900 mb-6">404 - Not Found</h1>
-//       <p className="text-gray-500 text-lg">
-//         {` Oops! The page you're looking for doesn't exist.`}
-//       </p>
-//     </div>
-//   );
-// }
-
-// export default NotFound;
 import Link from "next/link";
 
 export default function NotFound() {
