@@ -1,15 +1,16 @@
 "use client";
 
-import { useContext } from "react";
-import { TimelineContext } from "@/context/TimelineContext";
-import PieChartComponent from "@/components/PieChartComponent";
+import dynamic from "next/dynamic";
+
+const PieChartComponent = dynamic(
+  () => import("@/components/PieChartComponent"),
+  { ssr: false }
+);
 
 export default function StatsPage() {
-  const { data } = useContext(TimelineContext);
-
   return (
     <div>
-      <PieChartComponent data={data} />
+      <PieChartComponent />
     </div>
   );
 }

@@ -1,8 +1,11 @@
 "use client";
 
+import { useContext } from "react";
+import { TimelineContext } from "@/context/TimelineContext";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
-export default function PieChartComponent({ data = [] }) {
+export default function PieChartComponent() {
+  const { data } = useContext(TimelineContext);
 
   const counts = data.reduce((acc, curr) => {
     acc[curr.label] = (acc[curr.label] || 0) + 1;
