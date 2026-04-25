@@ -11,12 +11,10 @@ import {
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+import friendsData from "@/../public/friends.json";
+
 async function FriendDetails({ params }) {
   const { friend } = params;
-
-  const response = await fetch("/friends.json", { cache: "no-store" });
-
-  const friendsData = await response.json();
 
   const data = friendsData.find(
     (item) => String(item.id) === String(friend)

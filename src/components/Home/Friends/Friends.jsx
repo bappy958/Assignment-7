@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-async function Friends() {
-  const response = await fetch("/friends.json", { cache: "no-store" });
-  const friends = await response.json();
+import friendsData from "@/../public/friends.json";
+
+function Friends() {
+  const friends = friendsData;
 
   return (
     <div className="mt-5 border-t border-gray-200 px-4 sm:px-6">
