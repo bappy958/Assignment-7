@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import friendsData from "@/../public/friends.json";
-
-function Friends() {
-  const friends = friendsData;
+async function Friends() {
+  const response = await fetch("https://assignment-7-theta-seven.vercel.app/friends.json");
+  const friends = await response.json();
 
   return (
     <div className="mt-5 border-t border-gray-200 px-4 sm:px-6">

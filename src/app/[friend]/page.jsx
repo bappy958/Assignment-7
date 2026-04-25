@@ -11,10 +11,11 @@ import {
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-import friendsData from "@/../public/friends.json";
-
 async function FriendDetails({ params }) {
   const { friend } = params;
+
+  const response = await fetch("https://assignment-7-theta-seven.vercel.app/friends.json");
+  const friendsData = await response.json();
 
   const data = friendsData.find(
     (item) => String(item.id) === String(friend)
